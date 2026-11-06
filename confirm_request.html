@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>対応できます（確定画面） - ごみカツ！</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="./send_request.html" class="back-btn">戻る</a>
+            <h1>対応できます</h1>
+        </header>
+        <main>
+            <div class="profile-section">
+                <div class="img-placeholder">
+                    <img src="./images/icon_volunteer1.png" alt="ボランティア1">
+                </div>
+                <div>
+                    <h2>ボランティア1</h2>
+                    <p style="font-size: 0.9rem; color: #666;">★評価: 4.8 ｜ 距離: 300m</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>依頼内容詳細</h3>
+                <p><strong>ごみの種類：</strong>燃えるごみ</p>
+                <p><strong>依頼日時：</strong>2026年11月10日（火） 07:30</p>
+                <p><strong>場所：</strong>サンプル町1-1 ごみ集積所前</p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 10px;">
+                <a href="./home_requester.html" class="btn" onclick="alert('依頼を確定しました！');">確定する</a>
+                <a href="./search_volunteer.html" class="btn btn-light">キャンセルする</a>
+            </div>
+        </main>
+        <footer>© ごみカツ！</footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

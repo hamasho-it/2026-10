@@ -1,0 +1,211 @@
+/* ごみカツ！ 共通スタイルシート (style.css) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 414px; /* スマホ画面に最適な幅 */
+    background-color: #fff;
+    min-height: 90vh;
+    border: 2px solid #ccc;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.back-btn {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 高齢者にも見やすい大きなボタン・文字設計 */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+    background-color: #222;
+}
+
+.btn-secondary {
+    background-color: #777;
+}
+
+.btn-light {
+    background-color: #eee;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.btn-danger {
+    background-color: #888;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #eee;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* プレースホルダー・画像スタイリング */
+.img-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8rem;
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.img-placeholder.square {
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.tab-container {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 12px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #444;
+    color: #fff;
+}
+
+.list-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-item:hover {
+    background-color: #f0f0f0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #666;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 12px;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #eee;
+}

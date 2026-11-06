@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホーム画面（依頼者用） - ごみカツ！</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="./index.html" class="back-btn">戻る</a>
+            <h1>ホーム画面</h1>
+        </header>
+        <main>
+            <div class="profile-section">
+                <div class="img-placeholder">
+                    <img src="./images/icon_user.png" alt="プロフィール">
+                </div>
+                <div>
+                    <h2>プロフィール</h2>
+                    <p style="font-size: 1.1rem; font-weight: bold;">利用者A 様</p>
+                    <p style="font-size: 0.9rem; color: #666;">住所: サンプル町1-1</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>次回の予定</h3>
+                <p style="font-size: 1.1rem; font-weight: bold;">燃えるごみ：11月10日（火） 07:30</p>
+                <p style="font-size: 0.9rem; color: #555;">担当ボランティア：ボランティア1</p>
+            </div>
+
+            <a href="./notification.html" class="btn btn-light" style="text-align: left; padding: 14px;">通知履歴</a>
+
+            <div class="grid-menu">
+                <a href="./calendar.html" class="btn" style="padding: 24px 10px; font-size: 1.1rem;">カレンダー</a>
+                <a href="./search_volunteer.html" class="btn" style="padding: 24px 10px; font-size: 1.1rem;">ボランティアを探す</a>
+            </div>
+
+            <div class="grid-menu">
+                <a href="./history_requester.html" class="btn btn-secondary" style="padding: 24px 10px; font-size: 1.1rem;">支援履歴</a>
+                <a href="./notify_family.html" class="btn btn-secondary" style="padding: 24px 10px; font-size: 1.1rem;">家族に通知</a>
+            </div>
+        </main>
+        <footer>© ごみカツ！</footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

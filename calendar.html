@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カレンダー - ごみカツ！</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .calendar-header {
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 4px 0;
+            color: #555;
+        }
+        .calendar-day {
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 4px 2px;
+            min-height: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 0.85rem;
+        }
+        .calendar-day.today {
+            background-color: #f0f4ff;
+            border: 2px solid #444;
+            font-weight: bold;
+        }
+        .calendar-day .day-num {
+            margin-bottom: 2px;
+        }
+        .calendar-day .icon-mark {
+            font-size: 0.75rem;
+            line-height: 1;
+        }
+        .legend-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="./home_requester.html" class="back-btn">戻る</a>
+            <h1>ごみカレンダー</h1>
+        </header>
+        <main>
+            <div class="card" style="text-align: center; padding: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                    <button class="btn btn-light" style="width: auto; padding: 4px 12px; font-size: 0.9rem;">＜</button>
+                    <h2 style="font-size: 1.2rem;">2026年 11月</h2>
+                    <button class="btn btn-light" style="width: auto; padding: 4px 12px; font-size: 0.9rem;">＞</button>
+                </div>
+
+                <!-- カレンダーグリッド -->
+                <div class="calendar-grid">
+                    <div class="calendar-header" style="color: #d32f2f;">日</div>
+                    <div class="calendar-header">月</div>
+                    <div class="calendar-header">火</div>
+                    <div class="calendar-header">水</div>
+                    <div class="calendar-header">木</div>
+                    <div class="calendar-header">金</div>
+                    <div class="calendar-header" style="color: #1976d2;">土</div>
+
+                    <!-- 1週目 -->
+                    <div class="calendar-day"><span class="day-num" style="color:#d32f2f;">1</span></div>
+                    <div class="calendar-day"><span class="day-num">2</span></div>
+                    <div class="calendar-day"><span class="day-num">3</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num">4</span></div>
+                    <div class="calendar-day"><span class="day-num">5</span><span class="icon-mark">♻️</span></div>
+                    <div class="calendar-day"><span class="day-num">6</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num" style="color:#1976d2;">7</span></div>
+
+                    <!-- 2週目 -->
+                    <div class="calendar-day"><span class="day-num" style="color:#d32f2f;">8</span></div>
+                    <div class="calendar-day"><span class="day-num">9</span></div>
+                    <div class="calendar-day today"><span class="day-num">10</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num">11</span><span class="icon-mark">🗑️</span></div>
+                    <div class="calendar-day"><span class="day-num">12</span><span class="icon-mark">♻️</span></div>
+                    <div class="calendar-day"><span class="day-num">13</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num" style="color:#1976d2;">14</span></div>
+
+                    <!-- 3週目 -->
+                    <div class="calendar-day"><span class="day-num" style="color:#d32f2f;">15</span></div>
+                    <div class="calendar-day"><span class="day-num">16</span></div>
+                    <div class="calendar-day"><span class="day-num">17</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num">18</span></div>
+                    <div class="calendar-day"><span class="day-num">19</span><span class="icon-mark">♻️</span></div>
+                    <div class="calendar-day"><span class="day-num">20</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num" style="color:#1976d2;">21</span></div>
+
+                    <!-- 4週目 -->
+                    <div class="calendar-day"><span class="day-num" style="color:#d32f2f;">22</span></div>
+                    <div class="calendar-day"><span class="day-num">23</span></div>
+                    <div class="calendar-day"><span class="day-num">24</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num">25</span></div>
+                    <div class="calendar-day"><span class="day-num">26</span><span class="icon-mark">♻️</span></div>
+                    <div class="calendar-day"><span class="day-num">27</span><span class="icon-mark">🔥</span></div>
+                    <div class="calendar-day"><span class="day-num" style="color:#1976d2;">28</span></div>
+
+                    <!-- 5週目 -->
+                    <div class="calendar-day"><span class="day-num" style="color:#d32f2f;">29</span></div>
+                    <div class="calendar-day"><span class="day-num">30</span></div>
+                    <div class="calendar-day"></div>
+                    <div class="calendar-day"></div>
+                    <div class="calendar-day"></div>
+                    <div class="calendar-day"></div>
+                    <div class="calendar-day"></div>
+                </div>
+
+                <!-- 凡例 -->
+                <div class="legend-grid">
+                    <div class="legend-item"><span>🔥</span> 燃えるごみ</div>
+                    <div class="legend-item"><span>🗑️</span> 燃えないごみ</div>
+                    <div class="legend-item"><span>♻️</span> 資源ごみ</div>
+                    <div class="legend-item"><span>⭐</span> 回収しない日</div>
+                </div>
+            </div>
+
+            <div class="card" style="border-left: 6px solid #444; background-color: #fff9f9;">
+                <p style="color: #c62828; font-weight: bold; font-size: 0.95rem;">🔔 明日は 燃えるごみ の日です</p>
+                <p style="font-size: 0.85rem; color: #555; margin-top: 4px;">11月10日（火） 朝8時までに出しましょう</p>
+            </div>
+        </main>
+        <footer>© ごみカツ！</footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

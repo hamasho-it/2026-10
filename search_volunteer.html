@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボランティアを探す - ごみカツ！</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="./home_requester.html" class="back-btn">戻る</a>
+            <h1>ボランティアを探す</h1>
+        </header>
+        <main>
+            <div class="tab-container">
+                <button class="tab active">すべて（近くの順）</button>
+                <button class="tab">お気に入り</button>
+            </div>
+
+            <!-- ボランティア1：対応可能（マッチング成立） -->
+            <div class="card" style="border: 2px solid #444; background-color: #f0f7ff;">
+                <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 8px;">
+                    <div class="img-placeholder">
+                        <img src="./images/icon_volunteer1.png" alt="ボランティア1">
+                    </div>
+                    <div style="flex: 1;">
+                        <p style="font-size: 1.1rem; font-weight: bold;">ボランティア1</p>
+                        <p style="font-size: 0.85rem; color: #666;">★評価: 4.8 ｜ 距離: 300m</p>
+                        <span class="tag" style="background-color: #2e7d32; font-weight: bold; margin-top: 4px;">対応できます！</span>
+                    </div>
+                </div>
+                <a href="./confirm_request.html" class="btn" style="padding: 10px; font-size: 1rem; margin-top: 4px;">このボランティアで確定する</a>
+            </div>
+
+            <!-- ボランティア2 -->
+            <a href="./send_request.html" class="list-item">
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <div class="img-placeholder">
+                        <img src="./images/icon_volunteer1.png" alt="ボランティア2">
+                    </div>
+                    <div>
+                        <p style="font-size: 1.1rem; font-weight: bold;">ボランティア2</p>
+                        <p style="font-size: 0.9rem; color: #666;">★評価: 4.5 ｜ 距離: 500m</p>
+                    </div>
+                </div>
+                <span style="font-size: 1.5rem; color: #888;">＞</span>
+            </a>
+
+            <!-- ボランティア3 -->
+            <a href="./send_request.html" class="list-item">
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <div class="img-placeholder">
+                        <img src="./images/icon_volunteer1.png" alt="ボランティア3">
+                    </div>
+                    <div>
+                        <p style="font-size: 1.1rem; font-weight: bold;">ボランティア3</p>
+                        <p style="font-size: 0.9rem; color: #666;">★評価: 4.9 ｜ 距離: 800m</p>
+                    </div>
+                </div>
+                <span style="font-size: 1.5rem; color: #888;">＞</span>
+            </a>
+        </main>
+        <footer>© ごみカツ！</footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
