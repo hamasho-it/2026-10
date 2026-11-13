@@ -1,17 +1,17 @@
 /* ごみカツ！ 共通スタイルシート (style.css) */
-*/* ごみカツ！ 共通スタイルシート (style.css) */
 :root {
-    --color-main: #4A4A4A;         /* メインの色（見出し・上の帯） */
-    --color-accent: #E87A8F;       /* 強調の色（主なボタン） */
-    --color-accent-active: #D46378;/* 主なボタン押下時 */
-    --color-bg: #FAF6F1;           /* 背景の色 */
-    --color-surface: #FFFFFF;      /* カード・コンテナ背景 */
-    --color-surface-soft: #F3ECE4; /* やさしい補助背景 */
-    --color-text: #333333;         /* 文字の色 */
-    --color-text-muted: #666666;   /* 補足文字の色 */
-    --color-border: #E2D9CE;       /* やさしい枠線の色 */
-    --color-secondary: #7A8B99;    /* サブボタン（信頼・落ち着き） */
-    --color-acknowledged: #B8B2AA; /* 了解済みボタン */
+    --color-main: #4A4A4A;           /* メインの色（見出し・上の帯） */
+    --color-accent: #E87A8F;         /* 強調の色（主なボタン） */
+    --color-accent-active: #D46378;  /* 主なボタン押下時 */
+    --color-bg: #FDF2F4;             /* 全体の背景色（やさしい淡いピンク） */
+    --color-surface: #FFF8F9;        /* コンテナ・カード背景（ほんのりピンク白） */
+    --color-surface-soft: #FBE4E8;   /* 補助背景・プロフィール枠（ソフトピンク） */
+    --color-card-tint: #FCECEF;      /* カード背景（薄ピンク） */
+    --color-text: #333333;           /* 文字の色 */
+    --color-text-muted: #66585B;     /* 補足文字の色 */
+    --color-border: #F2C8D0;         /* やさしいピンクの枠線 */
+    --color-secondary: #D98FA0;      /* サブボタン（落ち着いたローズピンク） */
+    --color-acknowledged: #C4B3B7;   /* 了解済みボタン */
 }
 
 * {
@@ -42,9 +42,9 @@ body {
     max-width: 414px;
     background-color: var(--color-surface);
     min-height: 92vh;
-    border: 1px solid var(--color-border);
+    border: 1.5px solid var(--color-border);
     border-radius: 20px;
-    box-shadow: 0 6px 18px rgba(74, 74, 74, 0.08);
+    box-shadow: 0 6px 18px rgba(232, 122, 143, 0.14);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -53,10 +53,11 @@ body {
 
 header {
     background-color: var(--color-main);
-    color: var(--color-surface);
+    color: #FFFFFF;
     padding: 18px 16px;
     text-align: center;
     position: relative;
+    border-bottom: 3px solid var(--color-accent);
 }
 
 header h1 {
@@ -70,9 +71,9 @@ header h1 {
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.18);
-    color: var(--color-surface);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    border: none;
     min-height: 44px;
     padding: 8px 14px;
     border-radius: 999px;
@@ -92,6 +93,7 @@ main {
     flex-direction: column;
     gap: 16px;
     font-size: 1rem;
+    background-color: var(--color-surface);
 }
 
 h2, h3 {
@@ -106,7 +108,7 @@ h2, h3 {
     min-height: 52px;
     padding: 14px 18px;
     background-color: var(--color-accent);
-    color: var(--color-surface);
+    color: #FFFFFF;
     text-align: center;
     text-decoration: none;
     font-size: 1.15rem;
@@ -114,7 +116,7 @@ h2, h3 {
     border: none;
     border-radius: 16px;
     cursor: pointer;
-    box-shadow: 0 3px 8px rgba(232, 122, 143, 0.28);
+    box-shadow: 0 3px 10px rgba(232, 122, 143, 0.32);
     transition: background-color 0.2s, transform 0.1s;
 }
 
@@ -125,26 +127,26 @@ h2, h3 {
 
 .btn-secondary {
     background-color: var(--color-secondary);
-    box-shadow: 0 3px 8px rgba(122, 139, 153, 0.25);
+    box-shadow: 0 3px 8px rgba(217, 143, 160, 0.28);
 }
 
 .btn-light {
     background-color: var(--color-surface-soft);
     color: var(--color-text);
-    border: 1px solid var(--color-border);
+    border: 1.5px solid var(--color-border);
     box-shadow: none;
 }
 
 .btn-acknowledged {
     background-color: var(--color-acknowledged) !important;
-    color: var(--color-surface) !important;
+    color: #FFFFFF !important;
     box-shadow: none !important;
     cursor: default;
 }
 
 .card {
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-card-tint);
+    border: 1.5px solid var(--color-border);
     border-radius: 14px;
     padding: 16px;
     display: flex;
@@ -158,7 +160,7 @@ h2, h3 {
     align-items: center;
     gap: 14px;
     background-color: var(--color-surface-soft);
-    border: 1px solid var(--color-border);
+    border: 1.5px solid var(--color-border);
     padding: 14px;
     border-radius: 14px;
 }
@@ -203,6 +205,7 @@ h2, h3 {
     padding: 6px;
     border-radius: 14px;
     margin-bottom: 8px;
+    border: 1px solid var(--color-border);
 }
 
 .tab {
@@ -220,13 +223,13 @@ h2, h3 {
 }
 
 .tab.active {
-    background-color: var(--color-main);
-    color: var(--color-surface);
+    background-color: var(--color-accent);
+    color: #FFFFFF;
 }
 
 .list-item {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-card-tint);
+    border: 1.5px solid var(--color-border);
     border-radius: 14px;
     min-height: 64px;
     padding: 14px;
@@ -236,19 +239,19 @@ h2, h3 {
     text-decoration: none;
     color: var(--color-text);
     font-size: 1rem;
-    box-shadow: 0 2px 6px rgba(74, 74, 74, 0.05);
+    box-shadow: 0 2px 6px rgba(232, 122, 143, 0.1);
 }
 
 .list-item:hover,
 .list-item:active {
-    background-color: var(--color-bg);
+    background-color: var(--color-surface-soft);
 }
 
 .tag {
     display: inline-block;
     padding: 4px 10px;
-    background-color: var(--color-main);
-    color: var(--color-surface);
+    background-color: var(--color-accent);
+    color: #FFFFFF;
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: bold;
@@ -259,7 +262,7 @@ footer {
     padding: 14px;
     font-size: 0.9rem;
     color: var(--color-text-muted);
-    background-color: var(--color-bg);
+    background-color: var(--color-surface-soft);
     border-top: 1px solid var(--color-border);
 }
 
