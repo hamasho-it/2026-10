@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>見守り - ごみカツ！</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="./index.html" class="back-btn">戻る</a>
+            <h1>見守り</h1>
+        </header>
+        <main>
+            <div class="profile-section">
+                <div class="img-placeholder">
+                    <img src="./images/icon_user.png" alt="依頼者のプロフィール">
+                </div>
+                <div>
+                    <h2>依頼者のプロフィール</h2>
+                    <p style="font-size: 1.1rem; font-weight: bold;">利用者A 様</p>
+                    <p style="font-size: 0.85rem; color: #666;">サンプル町1-1在住</p>
+                </div>
+            </div>
+
+            <div class="card" style="background-color: #f0f4ff; border-color: #99b;">
+                <p style="font-size: 1.15rem; font-weight: bold;">ゴミ出しが完了しました</p>
+                <p style="font-size: 0.9rem; color: #555;">日時：2026年11月13日（金） 07:30</p>
+                <p style="font-size: 0.9rem; color: #555;">担当：ボランティア1</p>
+                <div style="display: flex; justify-content: flex-end; margin-top: 6px;">
+                    <button type="button" class="btn btn-secondary" onclick="acknowledgeMimamori(this)" style="width: auto; padding: 10px 24px; font-size: 1rem;">了解</button>
+                </div>
+            </div>
+
+            <div class="card" style="background-color: #f0f4ff; border-color: #99b;">
+                <p style="font-size: 1.15rem; font-weight: bold;">ゴミ出しが完了しました</p>
+                <p style="font-size: 0.9rem; color: #555;">日時：2026年11月10日（火） 07:28</p>
+                <p style="font-size: 0.9rem; color: #555;">担当：ボランティア1</p>
+                <div style="display: flex; justify-content: flex-end; margin-top: 6px;">
+                    <button type="button" class="btn btn-secondary" onclick="acknowledgeMimamori(this)" style="width: auto; padding: 10px 24px; font-size: 1rem;">了解</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <p style="font-size: 1.15rem; font-weight: bold;">ゴミ出しが完了しました</p>
+                <p style="font-size: 0.9rem; color: #555;">日時：2026年11月6日（金） 07:32</p>
+                <p style="font-size: 0.9rem; color: #555;">担当：ボランティア2</p>
+                <div style="display: flex; justify-content: flex-end; margin-top: 6px;">
+                    <button type="button" class="btn btn-acknowledged" style="width: auto; padding: 10px 24px; font-size: 1rem;">了解済み ✓</button>
+                </div>
+            </div>
+        </main>
+        <footer>© ごみカツ！</footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

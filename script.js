@@ -1,6 +1,5 @@
 // ごみカツ！ 共通JavaScript (script.js)
 document.addEventListener("DOMContentLoaded", function() {
-    // 画像読み込みエラー時に灰色のプレースホルダー表示を維持する処理
     const images = document.querySelectorAll('img');
     images.forEach(img => {
         img.addEventListener('error', function() {
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// 新しい支援依頼画面で「対応できません」ボタンが押された時の処理
+// 新しい支援依頼画面で「対応できません」を押したときの処理
 function removeRequestCard(button) {
     const card = button.closest('.card');
     if (card) {
@@ -22,5 +21,17 @@ function removeRequestCard(button) {
             card.remove();
             alert('支援依頼をスキップしました。');
         }, 300);
+    }
+}
+
+// 見守り画面で「了解」ボタンを押したときの処理
+function acknowledgeMimamori(button) {
+    if (button.classList.contains('btn-acknowledged')) return;
+    button.innerText = '了解済み ✓';
+    button.classList.add('btn-acknowledged');
+    const card = button.closest('.card');
+    if (card) {
+        card.style.backgroundColor = '#f9f9f9';
+        card.style.borderColor = '#ddd';
     }
 }
